@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="modal fade" id="selectedImageModal" >
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	         <img *ngIf="selectedImage" src="{{selectedImage.url}}" >
+	      </div>
+	    </div>
+	  </div>
+	</div>
+  	<ul id="thumbnailsList">
+  	   <li *ngFor="let image of datasource" >
+  	      <img [routerLink] ="['/image', image.id]" src="{{image.url}}" class="tn" width="200" height="160">
+  	   </li>
+  	</ul>
+</div>

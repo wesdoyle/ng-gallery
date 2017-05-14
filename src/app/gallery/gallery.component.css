@@ -1,0 +1,11 @@
+ul { padding:0; width:1200px; margin:20px auto}
+li { display:inline;}
+    .tn{
+ margin:6px 6px;
+ border: 4px solid #eee;
+ box-shadow:#555 1px 1px 8px 1px;
+ cursor: pointer
+    }
+.modal-content {
+  width: 1200px !important;
+}
