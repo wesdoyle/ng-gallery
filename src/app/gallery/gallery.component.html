@@ -1,16 +1,16 @@
 <div class="row">
-	<div class="modal fade" id="selectedImageModal" >
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-body">
-	         <img *ngIf="selectedImage" src="{{selectedImage.url}}" >
-	      </div>
-	    </div>
-	  </div>
-	</div>
-  	<ul id="thumbnailsList">
-  	   <li *ngFor="let image of datasource" >
-  	      <img [routerLink] ="['/image', image.id]" src="{{image.url}}" class="tn" width="200" height="160">
-  	   </li>
-  	</ul>
+    <h3>Photographs</h3>
+    <div class="row">
+        <button class="btn btn-default" [class.active]="filterBy==='all'" (click)="filterBy='all'">All</button>
+        <button class="btn btn-default" [class.active]="filterBy==='boats'" (click)="filterBy='boats'">Boats</button>
+        <button class="btn btn-default" [class.active]="filterBy==='camping'" (click)="filterBy='camping'">Camping</button>
+        <button class="btn btn-default" [class.active]="filterBy==='london'" (click)="filterBy='london'">London</button>
+    </div>
+    <ul id="thumbnailsList">
+        <li *ngFor="let image of datasource" >
+            <a [routerLink] ="['/image', image.id]">
+                <img src="{{image.url}}" class="tn" width="200" height="160">
+            </a>
+        </li>
+    </ul>
 </div>

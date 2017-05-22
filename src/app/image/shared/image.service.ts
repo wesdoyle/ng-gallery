@@ -2,8 +2,13 @@ import { Injectable } from '@angular/core'
 
 @Injectable()
 export class ImageService{
-  getImages(){
-    return IMAGES
+  getImages(filterCategory? : string){
+      if(filterCategory){
+          return IMAGES.filter(function(obj){
+              return obj.category == filterCategory
+          })
+      }
+      return IMAGES
   }
 
   getImage(id: number){
@@ -12,13 +17,20 @@ export class ImageService{
 }
 
 const IMAGES =[
-  {"id":1, "category": "Camping Photos", "caption": "Hanging Out", "url":"https://images.pexels.com/photos/344100/pexels-photo-344100.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"},
-  {"id":2, "category": "Camping Photos", "caption": "Overlook", "url":"https://images.pexels.com/photos/63917/pexels-photo-63917.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"},
-  {"id":3, "category": "Camping Photos", "caption": "Afternoon Hike", "url":"https://images.pexels.com/photos/27765/pexels-photo-27765.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"},
-  {"id":4, "category": "Camping Photos", "caption": "Hiking", "url":"https://images.pexels.com/photos/126383/pexels-photo-126383.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"},
-  {"id":5, "category": "Camping Photos", "caption": "Eating breakfast", "url":"https://images.pexels.com/photos/198979/pexels-photo-198979.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"},
-  {"id":6, "category": "Camping Photos", "caption": "Great Camping Spot", "url":"https://images.pexels.com/photos/27865/pexels-photo-27865.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"},
-  {"id":7, "category": "Thailand Photos", "caption": "Thailand", "url":"https://images.pexels.com/photos/235959/pexels-photo-235959.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"},
-  {"id":8, "category": "Thailand Photos", "caption": "Thailand Vacation", "url":"https://images.pexels.com/photos/176398/pexels-photo-176398.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"},
-  {"id":9, "category": "Thailand Photos", "caption": "Thailand", "url":"https://images.pexels.com/photos/111216/pexels-photo-111216.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"},
+    {"id":1, "category": "boats", "caption": "View from the boat", "url":"assets/img/boat_01.jpeg"},
+    {"id":2, "category": "boats", "caption": "Sailing the coast", "url":"assets/img/boat_02.jpeg"},
+    {"id":3, "category": "boats", "caption": "The water was nice", "url":"assets/img/boat_03.jpeg"},
+    {"id":4, "category": "boats", "caption": "Cool water cavern", "url":"assets/img/boat_04.jpg"},
+    {"id":5, "category": "boats", "caption": "Sunset at the docks", "url":"assets/img/boat_05.jpeg"},
+    {"id":6, "category": "camping", "caption": "Camping Trip '17'", "url":"assets/img/camping_01.jpg"},
+    {"id":7, "category": "camping", "caption": "Setting up a Tent", "url":"assets/img/camping_02.jpeg"},
+    {"id":8, "category": "camping", "caption": "View from the top", "url":"assets/img/camping_03.jpg"},
+    {"id":9, "category": "camping", "caption": "On the trail", "url":"assets/img/camping_04.jpg"},
+    {"id":10, "category": "camping", "caption": "Our camping spot", "url":"assets/img/camping_05.jpeg"},
+    {"id":11, "category": "camping", "caption": "RV Life", "url":"assets/img/camping_06.jpeg"},
+    {"id":12, "category": "camping", "caption": "Kim and Jessie", "url":"assets/img/camping_07.jpeg"},
+    {"id":13, "category": "london", "caption": "London at Night", "url":"assets/img/london_01.jpeg"},
+    {"id":14, "category": "london", "caption": "Thames", "url":"assets/img/london_02.jpeg"},
+    {"id":15, "category": "london", "caption": "Mounted Police", "url":"assets/img/london_03.jpeg"},
+    {"id":16, "category": "london", "caption": "Westminster Station", "url":"assets/img/london_04.jpeg"}
 ]

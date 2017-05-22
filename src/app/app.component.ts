@@ -8,9 +8,4 @@ import { ImageService } from './image/shared/image.service';
 })
 export class AppComponent {
   title = 'Photo Gallery';
-  images;
-
-  constructor(imageService: ImageService){
-    this.images = imageService.getImages();
-  }
 }

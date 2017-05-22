@@ -1,59 +1,24 @@
+
 .img-container{
-  min-height: 700px;
-  max-width: 900px;
-  background-repeat:no-repeat;
-  background-position: center;
-  margin-bottom: 16px;
-  margin-top:20px;
-  margin:auto;
-  float:none;
-}
-
-/* https://css-tricks.com/snippets/css/stack-of-paper/ */
-.paper {
-  background: #fff;
-  padding: 30px;
-  position: relative;
-}
-
-.paper,
-.paper::before,
-.paper::after {
-  /* Styles to distinguish sheets from one another */
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
-  border: 1px solid #bbb;
-}
-
-.paper::before,
-.paper::after {
-  content: "";
-  position: absolute;
-  height: 95%;
-  width: 99%;
-  background-color: #eee;
-}
-
-.paper::before {
-  right: 15px;
-  top: 0;
-  transform: rotate(-1deg);
-  z-index: -1;
-}
-
-.paper::after {
-  top: 5px;
-  right: -5px;
-  transform: rotate(1deg);
-  z-index: -2;
+    margin:6px 6px;
+    border: 4px solid #eee;
+    box-shadow:#555 1px 1px 8px 1px;
+    height: 660px;
+    width: 1000px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    float:left;
 }
 
 #caption{
-  font-size: 1.6em;
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-family: "Montserrat", sans-serif;
   padding: 13px;
-  color: #424242;
+  color: #222;
+  background-color: #f5f5f5;
   margin:auto;
+  border: 1px solid #bbb;
 }
 
 .caption-row{
@@ -64,28 +29,4 @@
   padding: 24px 0px 24px 8px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-}
-
-/*  https://paulund.co.uk/learn-css-box-shadow */
-.box {
-	background:#FFF;
-	margin:40px auto;
-}
-
-.effect6
-{
-  position:relative;
-  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-.effect6:before, .effect6:after
-{
-  content:"";
-  position:absolute;
-  z-index:-1;
-  box-shadow:0 0 20px rgba(0,0,0,0.8);
-  top:50%;
-  bottom:0;
-  left:10px;
-  right:10px;
-  border-radius:100px / 10px;
 }

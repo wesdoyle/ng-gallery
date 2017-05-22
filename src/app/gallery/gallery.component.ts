@@ -9,12 +9,7 @@ import { ImageService } from '../image/shared/image.service';
 
 export class GalleryComponent implements OnInit {
   @Input() datasource:any[];
-
-  selectedImage;
-
-  setSelectedImage(image){
-    this.selectedImage= image;
-  }
+  @Input() filterBy?: string = 'all'
 
   constructor(private imageService: ImageService) {
     this.datasource = this.imageService.getImages();
