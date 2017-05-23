@@ -5,27 +5,11 @@ export class ImageService{
     visibleImages = [];
 
     getImages(filterCategory? : string){
-        if(filterCategory === 'all'){
-            this.visibleImages = IMAGES.slice(0);
-            return this.visibleImages
-        } else {
-            return this.visibleImages = IMAGES.filter(image => {
-                return image.category.toLocaleLowerCase() === filterCategory;
-            })
-        }
+        return this.visibleImages = IMAGES.slice(0);
     }
 
-    // getImages(filterCategory? : string){
-    //     if(filterCategory){
-    //         return IMAGES.filter(function(obj){
-    //             return obj.category == filterCategory
-    //         })
-    //     }
-    //     return IMAGES
-    // }
-
     getImage(id: number){
-        return IMAGES.find(image => image.id == id)
+        return IMAGES.slice(0).find(image => image.id == id)
     }
 }
 
