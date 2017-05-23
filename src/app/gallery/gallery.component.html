@@ -1,13 +1,11 @@
 <div class="row">
-    <h3>Photographs</h3>
-    <div class="row">
-        <button class="btn btn-default" [class.active]="filterBy==='all'" (click)="filterBy='all'">All</button>
-        <button class="btn btn-default" [class.active]="filterBy==='boats'" (click)="filterBy='boats'">Boats</button>
-        <button class="btn btn-default" [class.active]="filterBy==='camping'" (click)="filterBy='camping'">Camping</button>
-        <button class="btn btn-default" [class.active]="filterBy==='london'" (click)="filterBy='london'">London</button>
-    </div>
+    <h1>Latest Photographs</h1>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy==='all'" (click)="filterBy='all'">All</button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy==='boats'" (click)="filterBy='boats'">Boats</button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy==='camping'" (click)="filterBy='camping'">Camping</button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy==='london'" (click)="filterBy='london'">London</button>
     <ul id="thumbnailsList">
-        <li *ngFor="let image of datasource" >
+        <li *ngFor="let image of visibleImages" >
             <a [routerLink] ="['/image', image.id]">
                 <img src="{{image.url}}" class="tn" width="200" height="160">
             </a>

@@ -9,3 +9,7 @@ li { display:inline;}
 .modal-content {
   width: 1200px !important;
 }
+
+h1, h2{
+    margin-bottom: 20px;
+}

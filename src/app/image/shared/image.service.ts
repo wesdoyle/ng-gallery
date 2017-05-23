@@ -2,18 +2,31 @@ import { Injectable } from '@angular/core'
 
 @Injectable()
 export class ImageService{
-  getImages(filterCategory? : string){
-      if(filterCategory){
-          return IMAGES.filter(function(obj){
-              return obj.category == filterCategory
-          })
-      }
-      return IMAGES
-  }
+    visibleImages = [];
 
-  getImage(id: number){
-    return IMAGES.find(image => image.id == id)
-  }
+    getImages(filterCategory? : string){
+        if(filterCategory === 'all'){
+            this.visibleImages = IMAGES.slice(0);
+            return this.visibleImages
+        } else {
+            return this.visibleImages = IMAGES.filter(image => {
+                return image.category.toLocaleLowerCase() === filterCategory;
+            })
+        }
+    }
+
+    // getImages(filterCategory? : string){
+    //     if(filterCategory){
+    //         return IMAGES.filter(function(obj){
+    //             return obj.category == filterCategory
+    //         })
+    //     }
+    //     return IMAGES
+    // }
+
+    getImage(id: number){
+        return IMAGES.find(image => image.id == id)
+    }
 }
 
 const IMAGES =[
