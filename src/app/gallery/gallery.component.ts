@@ -14,10 +14,10 @@ export class GalleryComponent implements OnChanges {
 
   constructor(private imageService: ImageService) {
     console.log(this.filterBy)
-    this.visibleImages = this.imageService.getImages(this.filterBy);
+    this.visibleImages = this.imageService.getImages();
   }
 
   ngOnChanges() {
-    this.visibleImages = this.imageService.getImages(this.filterBy);
+    this.visibleImages = this.imageService.getImages();
   }
 }

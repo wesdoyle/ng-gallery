@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core'
 export class ImageService{
     visibleImages = [];
 
-    getImages(filterCategory? : string){
+    getImages(){
         return this.visibleImages = IMAGES.slice(0);
     }
 

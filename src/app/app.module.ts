@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { ImageService } from './image/shared/image.service';
+import { ImageFilterPipe } from './image/shared/filter.pipe';
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageComponent } from './image/image.component';
@@ -18,7 +19,8 @@ import { appRoutes } from '../routes'
     GalleryComponent,
     ImageComponent,
     NavbarComponent,
-    ImageDetailComponent
+      ImageDetailComponent,
+      ImageFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import { appRoutes } from '../routes'
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ImageService],
+  providers: [ImageService, ImageFilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
