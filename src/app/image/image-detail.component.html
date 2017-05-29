@@ -1,16 +1,13 @@
-<div class="row navigation-row">
-  <div class="col-md-3" id="prev" [routerLink]="['/image', image.id]">
-      Back to {{image.category}}
+<div class="row">
+  <div class=col-md-12>
+    <div [ngStyle]="{'background-image':'url('+ image.url +')'}" class="img-container paper">
+    </div>
   </div>
 </div>
 <div class="row">
-    <div [ngStyle]="{'background-image':'url('+ image.url +')'}" class="fill img-container paper">
+    <div class="col-md-12 caption-row">
+      <span id="caption">
+        {{image.caption}}
+      </span>
     </div>
-</div>
-
-<hr />
-<div class="caption-row">
-  <span class="box effect6" id="caption">
-    {{image.caption}}
-  </span>
 </div>
