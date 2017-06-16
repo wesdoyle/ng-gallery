@@ -28,9 +28,9 @@
     "core-js": "^2.4.1",
     "express": "^4.15.3",
     "ng2-bootstrap": "^1.6.3",
+    "rxjs": "^5.1.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0",
-    "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
